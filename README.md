@@ -1,15 +1,14 @@
-# SteemJ Image Upload
-This project is a sub-project of [SteemJ](https://github.com/marvin-we/steem-java-api-wrapper) - The Steem API for Java. 
-
-[SteemJ Image Upload](https://github.com/marvin-we/steemj-image-upload) allows to upload images to ([https://steemitimages.com](https://steemitimages.com)) out of your Java application.
-
-The project has been initialized by <a href="https://steemit.com/@dez1337">dez1337 on steemit.com</a>.
-
 <center>
 
 ![SteemJImageUploadIcon](https://steemitimages.com/DQmfWn1z6HwwxfaWhrpY28MYh43wEEyNsV25GnGSGZUDo2U/SteemJImageSteemFriendlyWithUpdatetBanner.png)
   
 </center>
+
+This project is a sub-project of [SteemJ](https://github.com/marvin-we/steem-java-api-wrapper) - The Steem API for Java. 
+
+[SteemJ Image Upload](https://github.com/marvin-we/steemj-image-upload) allows to upload images to ([https://steemitimages.com](https://steemitimages.com)) out of your Java application.
+
+The project has been initialized by <a href="https://steemit.com/@dez1337">dez1337 on steemit.com</a>.
 
 # Binaries
 SteemJ Image Upload binaries are pushed into the maven central repository and can be integrated with a bunch of build management tools like Maven.
