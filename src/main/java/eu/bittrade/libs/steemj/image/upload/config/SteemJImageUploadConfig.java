@@ -1,20 +1,42 @@
+/*
+ * Copyright (c) [2017] [ bittrade.eu ]
+ * This file is part of steemj-image-upload.
+ * 
+ * Steemj-image-upload is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * Steemj-image-upload is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with Foobar. If not, see <http://www.gnu.org/licenses/>.
+ */
 package eu.bittrade.libs.steemj.image.upload.config;
 
 /**
- * This class stores the configuration that is used for the communication to the
- * defined server.
- * 
- * The setters can be used to override the default values.
+ * The SteemJImageUpload configuration. The class is already initiated with
+ * proper default values and does not need to be changed in general.
  * 
  * @author <a href="http://steemit.com/@dez1337">dez1337</a>
  */
 public class SteemJImageUploadConfig {
+    /** The wrapped <code>SteemJImageUploadConfig</code> instance. */
+    private static SteemJImageUploadConfig steemJImageUploadConfig;
+
     /** The endpoint to send the upload request to. */
     private String steemitImagesEndpoint = "https://steemitimages.com";
     /** The image signing challenge added to the hash. */
     private String imageSigningChallenge = "ImageSigningChallenge";
-
-    private static SteemJImageUploadConfig steemJImageUploadConfig;
+    /** The timeout in milliseconds to establish a connection. */
+    private int connectTimeout = 0;
+    /**
+     * The timeout in milliseconds to read data from an established connection.
+     */
+    private int readTimeout = 0;
 
     /**
      * Receive a
@@ -76,4 +98,49 @@ public class SteemJImageUploadConfig {
     public void setImageSigningChallenge(String imageSigningChallenge) {
         this.imageSigningChallenge = imageSigningChallenge;
     }
+
+    /**
+     * Get the configured timeout to establish a connection in millisecond (0
+     * for an infinite timeout).
+     * 
+     * @return the timeout to establish a connection in millisecond.
+     */
+    public int getConnectTimeout() {
+        return connectTimeout;
+    }
+
+    /**
+     * Override the default <code>connectTimeout</code>.
+     * 
+     * @param connectTimeout
+     *            the timeout to establish a connection in millisecond or 0 for
+     *            an infinite timeout.
+     */
+    public void setConnectTimeout(int connectTimeout) {
+        this.connectTimeout = connectTimeout;
+    }
+
+    /**
+     * Sets the timeout in milliseconds to read data from an established
+     * connection or 0 for an infinite timeout.
+     * 
+     * @return the readTimeout
+     */
+    public int getReadTimeout() {
+        return readTimeout;
+    }
+
+    /**
+     * Override the default <code>readTimeout</code>.
+     * 
+     * Sets the timeout in milliseconds to read data from an established
+     * connection or 0 for an infinite timeout.
+     * 
+     * @param readTimeout
+     *            the readTimeout to set
+     */
+    public void setReadTimeout(int readTimeout) {
+        this.readTimeout = readTimeout;
+    }
+
 }
