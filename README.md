@@ -19,7 +19,7 @@ File: <i>pom.xml</i>
 <dependency>
     <groupId>eu.bittrade.libs</groupId>
     <artifactId>steemj-image-upload</artifactId>
-    <version>1.0.0pre1</version>
+    <version>1.0.0</version>
 </dependency>
 ```
 
